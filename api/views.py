@@ -117,15 +117,15 @@ class PollsResult(ListModelMixin, GenericAPIView):
 		return Response(serializer.data)
 
 class PollsView(viewsets.ModelViewSet):
-	authentication_classes = [authentication.TokenAuthentication]
-	permission_classes = [permissions.IsAuthenticated]
+	# authentication_classes = [authentication.TokenAuthentication]
+	# permission_classes = [permissions.IsAuthenticated]
 
 	serializer_class = PollsSerializers
 	queryset = Polls.objects.all()
 
 class QuestionsView(viewsets.ModelViewSet):
-	authentication_classes = [authentication.TokenAuthentication]
-	permission_classes = [permissions.IsAuthenticated]
+	# authentication_classes = [authentication.TokenAuthentication]
+	# permission_classes = [permissions.IsAuthenticated]
 
 	serializer_class = QuestionsSerializers
 	queryset = Questions.objects.all()
