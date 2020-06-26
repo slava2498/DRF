@@ -4,6 +4,6 @@
 * [Вопросы](docs/questions-admin.md)
 
 ## Методы api для пользователей
-* [Опросы](docs/contract/README.md)
-* [Прохождение опроса](docs/doc.md)
-* [Получение результатов опроса](docs/doc.md)
+* [Опросы](docs/polls-user.md)
+* [Прохождение опроса](docs/start-user.md)
+* [Получение результатов опроса](docs/result-user.md)

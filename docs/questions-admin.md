@@ -13,7 +13,7 @@ POST-запрос, http://127.0.0.1:8000/questions/
 ```json
 {
     "text": "как ты",
-    "type_qustion": 'few',
+    "type_qustion": "few"',
     "options_id": "1,2,3"
 }
 ```
@@ -21,7 +21,7 @@ POST-запрос, http://127.0.0.1:8000/questions/
 ```json
 {
     "text": "как ты",
-    "type_qustion": 'one',
+    "type_qustion": "one",
     "options_id": "1"
 }
 ```
@@ -29,19 +29,35 @@ POST-запрос, http://127.0.0.1:8000/questions/
 ```json
 {
     "text": "как ты",
-    "type_qustion": 'text'
+    "type_qustion": "text"
 }
 ```
 
 PUT/PATCH-запрос, http://127.0.0.1:8000/questions/1
 Возвращает обновлённый объект
+
+Тип ответа - несколько вариантов
 ```json
 {
-    "text": "как ты",
-    "type_qustion": 'few',
-    // "options_id": "1,2,3"
+    "text": "как ты1",
+    "type_qustion": "few"',
+    "options_id": "1,2"
 }
 ```
+Тип ответа - один вариант вариантов
+```json
+{
+    "text": "как ты2",
+    "type_qustion": "one",
+    "options_id": "2"
+}
+```
+Тип ответа - текст
+```json
+{
+    "text": "как ты3",
+    "type_qustion": "text"
+}
 
 DELETE-запрос, http://127.0.0.1:8000/questions/1
 Удаляет объект
