@@ -18,14 +18,16 @@ from django.urls import path, re_path
 from api import views
 from rest_framework.routers import DefaultRouter
 
-router = DefaultRouter()
-router.register(r'polls', views.PollsView, basename='poll')
-router.register(r'questions', views.QuestionsView, basename='question')
-urlpatterns = router.urls
-
-urlpatterns += [
+urlpatterns = [
     re_path('admin/', admin.site.urls),
     re_path(r'^start_polls/$', views.PollsAnswer.as_view(), name='start'),
     re_path(r'^result_polls/$', views.PollsResult.as_view(), name='result'),
     re_path(r'^$', views.Input.as_view()),
 ]
+
+router = DefaultRouter()
+router.register(r'polls', views.PollsView, basename='poll')
+router.register(r'questions', views.QuestionsView, basename='question')
+urlpatterns += router.urls
+
+

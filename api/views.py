@@ -12,6 +12,7 @@ from rest_framework import status
 from datetime import datetime, timedelta, date
 from rest_framework.authtoken.models import Token
 from rest_framework import authentication, permissions
+from django.contrib.auth.models import User
 
 class Input(APIView):
 	def get(self, request, format=None):
@@ -117,15 +118,15 @@ class PollsResult(ListModelMixin, GenericAPIView):
 		return Response(serializer.data)
 
 class PollsView(viewsets.ModelViewSet):
-	# authentication_classes = [authentication.TokenAuthentication]
-	# permission_classes = [permissions.IsAuthenticated]
+	authentication_classes = [authentication.TokenAuthentication]
+	permission_classes = [permissions.IsAuthenticated]
 
 	serializer_class = PollsSerializers
 	queryset = Polls.objects.all()
 
 class QuestionsView(viewsets.ModelViewSet):
-	# authentication_classes = [authentication.TokenAuthentication]
-	# permission_classes = [permissions.IsAuthenticated]
+	authentication_classes = [authentication.TokenAuthentication]
+	permission_classes = [permissions.IsAuthenticated]
 
 	serializer_class = QuestionsSerializers
 	queryset = Questions.objects.all()
