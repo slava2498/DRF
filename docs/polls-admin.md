@@ -1,5 +1,7 @@
 Опросы
 ===
+Во всех запросах - Headers Authorization Token ac223e430cba8ea551f17833c9806c90b09b5694
+
 GET-запрос, http://127.0.0.1:8000/polls/
 Возвращает список опросов
 

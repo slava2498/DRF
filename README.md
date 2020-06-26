@@ -1,7 +1,7 @@
 ## Методы api для admin
 * [Авторизация](docs/autho-admin.md)
-* [Опросы](docs/polls-admin)
-* [Вопросы](docs/questions-admin)
+* [Опросы](docs/polls-admin.md)
+* [Вопросы](docs/questions-admin.md)
 
 ## Методы api для пользователей
 * [Опросы](docs/contract/README.md)
