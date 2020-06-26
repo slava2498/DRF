@@ -13,7 +13,7 @@ POST-запрос, http://127.0.0.1:8000/questions/
 ```json
 {
     "text": "как ты",
-    "type_qustion": "few"',
+    "type_qustion": "few",
     "options_id": "1,2,3"
 }
 ```
@@ -40,7 +40,7 @@ PUT/PATCH-запрос, http://127.0.0.1:8000/questions/1
 ```json
 {
     "text": "как ты1",
-    "type_qustion": "few"',
+    "type_qustion": "few",
     "options_id": "1,2"
 }
 ```

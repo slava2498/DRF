@@ -6,7 +6,7 @@ GET-запрос, http://127.0.0.1:8000/result_polls/
 ```json
 {
     "user_id": "1",
-    "poll_id": "1"'
+    "poll_id": "1"
 }
 ```
 Возвращает
